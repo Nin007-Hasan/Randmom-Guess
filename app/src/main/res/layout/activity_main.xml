@@ -1,18 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primaryColor"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16sp"
+            android:text="Welcome"
+            android:textColor="@android:color/white"
+            android:textSize="34sp"/>
+
+        <TextView
+            android:id="@+id/txt_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32sp"
+            android:layout_below="@+id/txt_welcome"
+            android:textSize="24sp"
+            android:text="Demo"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:id="@+id/add_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32sp"
+            android:layout_marginRight="32sp"
+            android:layout_marginTop="32sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txt_food_name"
+            android:hint="Add Your food Your"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_add_food"
+            android:layout_width="256sp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32sp"
+            android:layout_below="@id/add_food"
+            android:background="@color/colorAccent"
+            android:text="Add Food"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>
